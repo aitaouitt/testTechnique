@@ -62,5 +62,8 @@ class homePage {
     static headerOnglets(){
         return cy.get(".header-content-links")
     }
+    static prices(){
+        return ".foncia-card-price"
+    }
 }
 export {homePage}
