@@ -1,5 +1,4 @@
-# foncia
-## Tests Cypress foncia
+# Tests Cypress Foncia
 - ## 💻 Pre-requisites
     1- Télécharger et installer Node.js
         https://nodejs.org/es/download/
@@ -34,7 +33,6 @@
             1- lancer la commande <npm run testProd> pour executer le test en Prod
 
             2- lancer la commande <npm run testPreProd> pour executer le test en Pre-Prod
-
 
             à la fin de chaque éxecution des tests, un rapport HTML sera géneré. 
 
