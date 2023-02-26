@@ -6,7 +6,7 @@
   "scripts": {
     "cypress:open": "cypress open",
     "cy:run": "cypress run",
-    "testProd": "cypress run --env TAGS=@Prod --browser firefox || npm run report && npm run report",
+    "testProd": "cypress run --env TAGS=@Prod --browser firefox && npm run report",
     "report": "node cucumber-html-report.js"
   },
   "keywords": [

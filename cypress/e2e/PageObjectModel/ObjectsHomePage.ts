@@ -29,9 +29,38 @@ class homePage {
     static selectTypeBien() {
         return cy.get('#propertyToggle>span[class=\"plus\"]')
     }
-
-    
-
-    
+    static typeBien() {
+        return cy.get('.dropdown-button>label')
+    }
+    static inputLoyer() {
+        return cy.get('#price')
+    }
+    static inputVille() {
+        return cy.get('#city')
+    }
+    static listDeroulante() {
+        return cy.get('#pr_id_6_list>li')
+    }
+    static btRechercher() {
+        return cy.xpath('//*[@id="search-bar"]/div/form[1]/div/div[5]/app-foncia-button[2]')
+    }
+    static listBiens(){
+        return cy.get('.foncia-card')
+    }
+    static numPages(){
+        return cy.get('.map-pagination>li>a')
+    }
+    static headerLocalisation(){
+        return cy.get('.search-results-header-location')
+    }
+    static headerLoyer(){
+        return cy.get('.search-results-header-price')
+    }
+    static paginasion(){
+        return '.paginator-container'
+    }
+    static headerOnglets(){
+        return cy.get(".header-content-links")
+    }
 }
 export {homePage}
