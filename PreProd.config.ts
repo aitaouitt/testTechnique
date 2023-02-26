@@ -28,7 +28,7 @@ module.exports = defineConfig({
     },
     env: {
     },
-    baseUrl: "https://fr.foncia.com/",
+    baseUrl: "https://fr.foncia.com/", // à remplacer par l'url de la preprod
     specPattern: "cypress/e2e/features/*.feature",
     chromeWebSecurity: false,
     video: false,

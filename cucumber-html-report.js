@@ -14,7 +14,7 @@ report.generate({
     screenFolder: "cypress/screenshots",
   metadata:{
     browser: {
-        name: 'chrome',
+        name: 'Electron',
         version: '96'
     },
     device: 'Local test machine',
@@ -26,7 +26,7 @@ report.generate({
   customData: {
       title: 'Run info',
       data: [
-          {label: 'Project', value: 'Alexandra'},
+          {label: 'Project', value: 'Foncia'},
           {label: 'Release', value: '1.2.3'},
           {label: "Date d'Exécution", value: dateString}
       ]

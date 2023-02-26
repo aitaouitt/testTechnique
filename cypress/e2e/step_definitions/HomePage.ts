@@ -1,7 +1,7 @@
 import { Given, When, Then, Before, After, And } from "@badeball/cypress-cucumber-preprocessor";
 import { homePage } from "../PageObjectModel/ObjectsHomePage";
 
-    Given ("Ouverture de l'application",() => {
+    Given ("Ouverture du site Foncia",() => {
         cy.visit('/')
         cy.wait(2000)
         homePage.btFermePop().click()
