@@ -1,4 +1,4 @@
-# Tests Cypress Foncia
+# Tests Cypress
 - ## 💻 Pre-requisites
     1- Télécharger et installer Node.js
         https://nodejs.org/es/download/
