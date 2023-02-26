@@ -45,4 +45,6 @@
             Etapes:
                 1- Ouvrir l'interface avec la commande <npm run cypress:open>
                 
-                2- Clicker sur le test pour le lancer.
+                2- Choisir <E2E Testing> puis le navigateur de votre choix
+
+                2- Clicker sur le test pour le lancer
