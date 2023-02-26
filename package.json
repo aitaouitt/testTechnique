@@ -2,11 +2,11 @@
   "name": "cypress10-cucumber",
   "version": "1.0.0",
   "description": "Tests autos",
-  "main": "index.config.js",
+  "main": "index.config.ts",
   "scripts": {
     "cypress:open": "cypress open",
     "cy:run": "cypress run",
-    "testProd": "cypress run --config-file cypressProd.config.js --env TAGS=@Prod --browser firefox || npm run report && npm run report",
+    "testProd": "cypress run --env TAGS=@Prod --browser firefox || npm run report && npm run report",
     "report": "node cucumber-html-report.js"
   },
   "keywords": [

@@ -4,35 +4,35 @@
  */
 
 import { defineConfig } from "cypress";
-import {downloadFile } from "cypress-downloadfile/lib/addPlugin";
-import createBundler from "@bahmutov/cypress-esbuild-preprocessor";
-import addCucumberPreprocessorPlugin  from "@badeball/cypress-cucumber-preprocessor";
-import createEsbuildPlugin from "@badeball/cypress-cucumber-preprocessor/esbuild";
-import cucumber from "@badeball/cypress-cucumber-preprocessor";
-import fs from "fs";
-import path from "path";
-import dns from "dns";
-import {rmdir } from "fs";
+const path = require("path");
+const createBundler = require("@bahmutov/cypress-esbuild-preprocessor");
+const createEsbuildPlugin =
+  require("@badeball/cypress-cucumber-preprocessor/esbuild").createEsbuildPlugin;
+const addCucumberPreprocessorPlugin =
+  require("@badeball/cypress-cucumber-preprocessor").addCucumberPreprocessorPlugin;
 module.exports = defineConfig({
   e2e: {
     async setupNodeEvents(on, config) {
       config.env = {
         ...process.env,
         ...config.env
-    }
-      on("task", {
-      });
-      on("before:browser:launch", (browser, launchOptions) => {});
-      return config;
+    },
+    on("file:preprocessor", createBundler({
+      plugins: [createEsbuildPlugin(config)],
+    }));
+    await addCucumberPreprocessorPlugin(on, config);
+    on("task", {
+    });
+    on("before:browser:launch", (browser, launchOptions) => {});
+    return config;
     },
     env: {
-      ProCeeFront: {
-        baseUrl:
-          "http://procee-front.s3-website.eu-west-3.amazonaws.com/prod/#/connexion",
-      },
+      // Prod: {
+      //   baseUrl: "https://fr.foncia.com/",
+      // },
     },
-    specPattern: "cypress/e2e/features/*.feature",
     baseUrl: "https://fr.foncia.com/",
+    specPattern: "cypress/e2e/features/*.feature",
     chromeWebSecurity: false,
     defaultCommandTimeout: 60000,
     responseTimeout: 60000,
@@ -41,11 +41,4 @@ module.exports = defineConfig({
     viewportWidth: 1800,
   },
 });
-function beforeRunHook(details: any) {
-  throw new Error("Function not implemented.");
-}
-
-function afterRunHook() {
-  throw new Error("Function not implemented.");
-}
 
