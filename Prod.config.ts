@@ -16,15 +16,15 @@ module.exports = defineConfig({
       config.env = {
         ...process.env,
         ...config.env
-    },
-    on("file:preprocessor", createBundler({
-      plugins: [createEsbuildPlugin(config)],
-    }));
-    await addCucumberPreprocessorPlugin(on, config);
-    on("task", {
-    });
-    on("before:browser:launch", (browser, launchOptions) => {});
-    return config;
+      },
+      on("file:preprocessor", createBundler({
+        plugins: [createEsbuildPlugin(config)],
+      }));
+      await addCucumberPreprocessorPlugin(on, config);
+      on("task", {
+      });
+      on("before:browser:launch", (browser, launchOptions) => {});
+      return config;
     },
     env: {
     },

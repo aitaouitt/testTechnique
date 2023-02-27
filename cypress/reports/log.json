@@ -1,0 +1,76 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "vérifications-de-la-page-d'accueil-et-recherche-d'un-bien;vérifications-de-la-page-d'accueil-et-recherche-d'un-bien",
+        "keyword": "Scenario Outline",
+        "line": 5,
+        "name": "Vérifications de la page d'accueil et recherche d'un bien",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 6,
+            "name": "Ouverture du site Foncia",
+            "result": {
+              "duration": 4562000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "When ",
+            "line": 7,
+            "name": "Vérification du contenu de la page d'accueil",
+            "result": {
+              "duration": 113000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 8,
+            "name": "Recherche du bien",
+            "result": {
+              "duration": 3411000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 9,
+            "name": "Vérification du résultat de la recherche",
+            "result": {
+              "duration": 10634000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario",
+        "tags": [
+          {
+            "line": 4,
+            "name": "@focus"
+          }
+        ]
+      }
+    ],
+    "id": "vérifications-de-la-page-d'accueil-et-recherche-d'un-bien",
+    "keyword": "Feature",
+    "line": 1,
+    "name": "Vérifications de la page d'accueil et recherche d'un bien",
+    "uri": "cypress/e2e/features/VerificationHomePageEtRechercheBien.feature"
+  }
+]
